@@ -1,14 +1,32 @@
 {
     "name": "moment-random-date",
     "version": "0.1.0",
-    "main": "index.js",
+    "description": "Generates a random momentjs object",
+    "main": "dist/index.js",
+    "scripts": {
+        "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+        "test": "mocha src/index.test.js --compilers js:babel-register"
+    },
     "repository": {
         "url": "git@github.com:imrvelj/moment-random-date.git",
         "type": "git"
     },
     "author": "Ivan Mrvelj <sk8raid@gmail.com>",
+    "files": [
+        "dist",
+        "README.md"
+    ],
     "license": "MIT",
     "dependencies": {
         "moment": "^2.15.2"
+    },
+    "devDependencies": {
+        "babel-cli": "^6.18.0",
+        "babel-eslint": "^7.1.0",
+        "babel-preset-es2015": "^6.18.0",
+        "babel-register": "^6.18.0",
+        "chai": "^3.5.0",
+        "eslint": "^3.9.1",
+        "mocha": "^3.1.2"
     }
 }
