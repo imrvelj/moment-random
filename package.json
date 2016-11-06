@@ -1,6 +1,6 @@
 {
     "name": "moment-random-date",
-    "version": "1.0.0",
+    "version": "0.1.0",
     "main": "index.js",
     "repository": {
         "url": "git@github.com:imrvelj/moment-random-date.git",
