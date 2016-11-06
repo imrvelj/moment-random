@@ -1,0 +1,14 @@
+{
+    "name": "moment-random-date",
+    "version": "1.0.0",
+    "main": "index.js",
+    "repository": {
+        "url": "git@github.com:imrvelj/moment-random-date.git",
+        "type": "git"
+    },
+    "author": "Ivan Mrvelj <sk8raid@gmail.com>",
+    "license": "MIT",
+    "dependencies": {
+        "moment": "^2.15.2"
+    }
+}
