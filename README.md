@@ -17,7 +17,7 @@ const momentRandom = require('moment-random');
 momentRandom();
 // > random date in the past
 ```
-
+---
 ```
 momentRandom(end, start)
 ```
