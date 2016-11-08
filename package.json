@@ -1,10 +1,12 @@
 {
-    "name": "moment-random-date",
+    "name": "moment-random",
     "version": "0.1.0",
     "description": "Generates a random momentjs object",
     "main": "dist/index.js",
     "scripts": {
         "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
+        "build:umd": "webpack",
+        "build:umd:watch": "webpack --watch",
         "test": "mocha src/index.test.js --compilers js:babel-register"
     },
     "repository": {
@@ -18,7 +20,9 @@
     ],
     "license": "MIT",
     "dependencies": {
-        "moment": "^2.15.2"
+        "babel-loader": "^6.2.7",
+        "moment": "^2.15.2",
+        "webpack": "^1.13.3"
     },
     "devDependencies": {
         "babel-cli": "^6.18.0",
