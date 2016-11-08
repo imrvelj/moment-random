@@ -9,7 +9,6 @@ module.exports = {
         libraryTarget: 'umd',
         library: 'momentRandom',
     },
-    devtool: 'source-map',
     module: {
         loaders: [
             {test: /\.js$/, loader: 'babel', include}

@@ -10,4 +10,11 @@ describe('moment-random', () => {
     it('should return a moment object', () => {
         expect(moment.isMoment(momentRandom())).to.equal(true);
     });
+
+    it('should return a moment object by calling it with Date objects', () => {
+        expect(
+            () => momentRandom(new Date('2000-01-01'), new Date('2001-01-01'))
+
+        ).to.throw(Error);
+    });
 });
