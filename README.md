@@ -1,4 +1,4 @@
-![Build Status](https://travis-ci.org/imrvelj/moment-random.svg?branch=master)](https://travis-ci.org/imrvelj/moment-random)
+![Build Status](https://travis-ci.org/imrvelj/moment-random.svg?branch=master)
 # moment-random
 > Generates a new random moment.js object
 
