@@ -1,6 +1,6 @@
 {
     "name": "moment-random",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "author": "Ivan Mrvelj <sk8raid@gmail.com>",
     "description": "Generates a random momentjs object",
     "license": "MIT",
@@ -10,6 +10,7 @@
     },
     "main": "dist/index.js",
     "scripts": {
+        "precommit": "npm test",
         "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
         "build:umd": "webpack --config ./config/webpack.config.js",
         "build:umd:watch": "webpack --watch --config ./config/webpack.config.js",
@@ -51,6 +52,7 @@
         "babel-register": "^6.18.0",
         "eslint": "^3.9.1",
         "eslint-plugin-jest": "^19.0.1",
+        "husky": "^0.13.3",
         "jest": "^19.0.2",
         "webpack": "^2.4.1",
         "webpack-dev-server": "^2.4.2"
