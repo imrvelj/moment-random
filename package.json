@@ -1,36 +1,61 @@
 {
     "name": "moment-random",
-    "version": "0.1.1",
+    "version": "0.9.0",
+    "author": "Ivan Mrvelj <sk8raid@gmail.com>",
     "description": "Generates a random momentjs object",
+    "license": "MIT",
+    "repository": {
+        "url": "git@github.com:imrvelj/moment-random.git",
+        "type": "git"
+    },
     "main": "dist/index.js",
     "scripts": {
         "build": "babel --copy-files --out-dir dist --ignore *.test.js src",
-        "build:umd": "webpack",
-        "build:umd:watch": "webpack --watch",
-        "test": "mocha src/index.test.js --compilers js:babel-register"
+        "build:umd": "webpack --config ./config/webpack.config.js",
+        "build:umd:watch": "webpack --watch --config ./config/webpack.config.js",
+        "dist": "rm -rf dist/; npm run build; npm run build:umd",
+        "serve": "webpack-dev-server --inline --config ./config/webpack.dev.js",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch"
     },
-    "repository": {
-        "url": "git@github.com:imrvelj/moment-random-date.git",
-        "type": "git"
-    },
-    "author": "Ivan Mrvelj <sk8raid@gmail.com>",
     "files": [
         "dist",
         "README.md"
     ],
-    "license": "MIT",
+    "jest": {
+        "collectCoverageFrom": [
+            "src/*.js"
+        ],
+        "testMatch": [
+            "**/test/**/*.spec.js?(x)"
+        ],
+        "moduleFileExtensions": [
+            "js"
+        ],
+        "moduleDirectories": [
+            "node_modules"
+        ],
+        "transform": {
+            "^.+\\.js$": "babel-jest"
+        }
+    },
     "dependencies": {
         "moment": "^2.15.2"
     },
     "devDependencies": {
         "babel-cli": "^6.18.0",
         "babel-eslint": "^7.1.0",
+        "babel-jest": "^19.0.0",
         "babel-loader": "^6.2.7",
-        "babel-preset-es2015": "^6.18.0",
+        "babel-preset-env": "^1.4.0",
         "babel-register": "^6.18.0",
-        "chai": "^3.5.0",
         "eslint": "^3.9.1",
-        "mocha": "^3.1.2",
-        "webpack": "^1.13.3"
+        "eslint-plugin-jest": "^19.0.1",
+        "jest": "^19.0.2",
+        "webpack": "^2.4.1",
+        "webpack-dev-server": "^2.4.2"
+    },
+    "peerDependencies": {
+        "moment": ">= 2"
     }
 }

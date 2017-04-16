@@ -1,13 +1,11 @@
 {
     "extends": "eslint:recommended",
     "ecmaFeatures": {
-        "jsx": true,
         "modules": true
     },
     "env": {
         "browser": true,
-        "node": true,
-        "mocha": true
+        "node": true
     },
     "parser": "babel-eslint",
     "rules": {

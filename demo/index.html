@@ -9,14 +9,7 @@
 <body>
     <button id="btn">Get a random moment</button>
     <div id="element"></div>
-    <script src="../dist/index.umd.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        var btn = document.getElementById('btn');
-        var el = document.getElementById('element');
-
-        btn.addEventListener('click', function() {
-            el.innerHTML = window.momentRandom().format();
-        });
-    </script>
+    <script src="bundle.js" charset="utf-8"></script>
+    <script src="moment-random.js" charset="utf-8"></script>
 </body>
 </html>

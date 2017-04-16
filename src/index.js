@@ -5,7 +5,7 @@ import moment from 'moment';
  * @param  {object} options
  * @return {object} returnObject - momentObject
  */
-function randomMoment(end = moment(), start) {
+export function randomMoment(end = moment(), start) {
     const endMoment = moment(end);
     const randomNumber = (to, from = 0) => Math.floor(Math.random() * (to - from) + from);
 
@@ -19,5 +19,3 @@ function randomMoment(end = moment(), start) {
         return moment.unix(randomNumber(endMoment.unix()));
     }
 }
-
-module.exports = randomMoment;
