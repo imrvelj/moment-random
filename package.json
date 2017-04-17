@@ -1,6 +1,6 @@
 {
     "name": "moment-random",
-    "version": "0.9.5",
+    "version": "1.0.0",
     "author": "Ivan Mrvelj <sk8raid@gmail.com>",
     "description": "Generates a random momentjs object",
     "license": "MIT",
