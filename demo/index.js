@@ -1,4 +1,4 @@
-import { randomMoment as random } from '../dist/index';
+const random = require('../src/index');
 
 const btn = document.getElementById('btn');
 const element = document.getElementById('element');

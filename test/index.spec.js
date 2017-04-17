@@ -1,5 +1,5 @@
 import moment from 'moment';
-import { randomMoment as random } from '../src/index';
+import random from '../src/index';
 
 describe('moment-random', () => {
     test('should be defined', () => {
@@ -20,5 +20,13 @@ describe('moment-random', () => {
         const date = random(new Date('2001-01-01'), new Date('2000-01-01'));
         expect(date.isAfter('2000-01-01')).toBeTruthy();
         expect(date.isBefore('2001-01-01')).toBeTruthy();
+    });
+
+    test('should return a proper moment object with random stuff in arguments', () => {
+        const date = random('20130208', moment('12-25-1995', 'MM-DD-YYYY'));
+
+        expect(moment.isMoment(date)).toBeTruthy();
+        expect(date.isAfter('1995-12-25')).toBeTruthy();
+        expect(date.isBefore('2013-02-08')).toBeTruthy();
     });
 });

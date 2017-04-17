@@ -2,11 +2,11 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory(require("moment"));
 	else if(typeof define === 'function' && define.amd)
-		define("moment-random", ["moment"], factory);
+		define("momentRandom", ["moment"], factory);
 	else if(typeof exports === 'object')
-		exports["moment-random"] = factory(require("moment"));
+		exports["momentRandom"] = factory(require("moment"));
 	else
-		root["moment-random"] = factory(root["moment"]);
+		root["momentRandom"] = factory(root["moment"]);
 })(this, function(__WEBPACK_EXTERNAL_MODULE_0__) {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
@@ -89,42 +89,35 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_0__;
 "use strict";
 
 
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.randomMoment = randomMoment;
-
-var _moment = __webpack_require__(0);
-
-var _moment2 = _interopRequireDefault(_moment);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+var moment = __webpack_require__(0);
 
 /**
  * Generates a new, random moment object
  * @param  {object} options
  * @return {object} returnObject - momentObject
  */
-function randomMoment() {
-    var end = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : (0, _moment2.default)();
+var momentRandom = function momentRandom() {
+    var end = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : moment();
     var start = arguments[1];
 
-    var endMoment = (0, _moment2.default)(end);
+    var endMoment = moment(end);
     var randomNumber = function randomNumber(to) {
         var from = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
         return Math.floor(Math.random() * (to - from) + from);
     };
 
     if (start) {
-        var startMoment = (0, _moment2.default)(start);
+        var startMoment = moment(start);
         if (startMoment.unix() > endMoment.unix()) {
             throw new Error('End date is before start date!');
         }
-        return _moment2.default.unix(randomNumber(endMoment.unix(), startMoment.unix()));
+        return moment.unix(randomNumber(endMoment.unix(), startMoment.unix()));
     } else {
-        return _moment2.default.unix(randomNumber(endMoment.unix()));
+        return moment.unix(randomNumber(endMoment.unix()));
     }
-}
+};
+
+module.exports = momentRandom;
 
 /***/ })
 /******/ ]);

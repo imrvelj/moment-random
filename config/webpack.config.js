@@ -6,10 +6,10 @@ module.exports = {
         moment: 'moment'
     },
     output: {
-        filename: 'moment-random.js',
         path: path.join(__dirname, '../dist'),
+        filename: 'moment-random.js',
         libraryTarget: 'umd',
-        library: 'moment-random',
+        library: 'momentRandom',
         umdNamedDefine: true
     },
     module: {
