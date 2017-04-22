@@ -2,7 +2,7 @@
 # moment-random
 ![Build Status](https://travis-ci.org/imrvelj/moment-random.svg?branch=master)
 
-<img src="moment.png" style="width: 100px" />
+<img src="https://github.com/imrvelj/moment-random/raw/master/moment.png" style="width: 100px" />
 
 > Generates a new random moment.js object
 
