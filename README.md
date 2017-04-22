@@ -1,7 +1,8 @@
 
 # moment-random
-
 ![Build Status](https://travis-ci.org/imrvelj/moment-random.svg?branch=master)
+
+<img src="moment.png" style="width: 100px" />
 
 > Generates a new random moment.js object
 
@@ -30,8 +31,11 @@ momentRandom();
 
 You can also specify an interval
 ```js
+momentRandom(end)
+// > random date between 0 unix time and {end} dates
+
 momentRandom(end, start)
-// > random date between start and end dates
+// > random date between {start} and {end} dates
 ```
 
 **Arguments**
