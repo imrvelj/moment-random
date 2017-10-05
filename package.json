@@ -1,52 +1,52 @@
 {
-    "name": "moment-random",
-    "version": "1.0.2",
-    "author": "Ivan Mrvelj <sk8raid@gmail.com>",
-    "description": "Generates a random momentjs object",
-    "license": "MIT",
-    "repository": {
-        "url": "git@github.com:imrvelj/moment-random.git",
-        "type": "git"
-    },
-    "main": "src/index.js",
-    "scripts": {
-        "precommit": "npm test",
-        "test": "jest --coverage",
-        "test:watch": "jest --watch"
-    },
-    "files": [
-        "src",
-        "README.md"
+  "name": "moment-random",
+  "version": "1.0.2",
+  "author": "Ivan Mrvelj <sk8raid@gmail.com>",
+  "description": "Generates a random momentjs object",
+  "license": "MIT",
+  "repository": {
+    "url": "git@github.com:imrvelj/moment-random.git",
+    "type": "git"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "precommit": "npm test",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "files": [
+    "src",
+    "README.md"
+  ],
+  "jest": {
+    "collectCoverageFrom": [
+      "src/*.js"
     ],
-    "jest": {
-        "collectCoverageFrom": [
-            "src/*.js"
-        ],
-        "testMatch": [
-            "**/test/**/*.spec.js?(x)"
-        ],
-        "moduleFileExtensions": [
-            "js"
-        ],
-        "moduleDirectories": [
-            "node_modules"
-        ],
-        "transform": {
-            "^.+\\.js$": "babel-jest"
-        }
-    },
-    "devDependencies": {
-        "babel-eslint": "^7.1.0",
-        "babel-jest": "^19.0.0",
-        "babel-preset-env": "^1.4.0",
-        "eslint": "^3.9.1",
-        "eslint-plugin-jest": "^19.0.1",
-        "husky": "^0.13.3",
-        "jest": "^19.0.2",
-        "moment": "^2.18.1",
-        "rimraf": "^2.6.1"
-    },
-    "peerDependencies": {
-        "moment": ">= 2"
+    "testMatch": [
+      "**/test/**/*.spec.js?(x)"
+    ],
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest"
     }
+  },
+  "devDependencies": {
+    "babel-eslint": "^7.1.0",
+    "babel-jest": "^19.0.0",
+    "babel-preset-env": "^1.4.0",
+    "eslint": "^3.9.1",
+    "eslint-plugin-jest": "^19.0.1",
+    "husky": "^0.13.3",
+    "jest": "^19.0.2",
+    "moment": "^2.18.1",
+    "rimraf": "^2.6.1"
+  },
+  "peerDependencies": {
+    "moment": ">= 2"
+  }
 }

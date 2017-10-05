@@ -8,19 +8,19 @@ const moment = require('moment');
  * @returns 
  */
 function momentRandom(end = moment(), start) {
-    const endMoment = moment(end);
-    const randomNumber = (to, from = 0) =>
-        Math.floor(Math.random() * (to - from) + from);
+  const endMoment = moment(end);
+  const randomNumber = (to, from = 0) =>
+    Math.floor(Math.random() * (to - from) + from);
 
-    if(start) {
-        const startMoment = moment(start);
-        if(startMoment.unix() > endMoment.unix()) {
-            throw new Error('End date is before start date!');
-        }
-        return moment.unix(randomNumber(endMoment.unix(), startMoment.unix()));
-    } else {
-        return moment.unix(randomNumber(endMoment.unix()));
+  if (start) {
+    const startMoment = moment(start);
+    if (startMoment.unix() > endMoment.unix()) {
+      throw new Error('End date is before start date!');
     }
+    return moment.unix(randomNumber(endMoment.unix(), startMoment.unix()));
+  } else {
+    return moment.unix(randomNumber(endMoment.unix()));
+  }
 }
 
 module.exports = momentRandom;

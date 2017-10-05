@@ -1,18 +1,20 @@
 {
-    "extends": "eslint:recommended",
-    "ecmaFeatures": {
-        "modules": true
-    },
-    "env": {
-        "browser": true,
-        "node": true
-    },
-    "parser": "babel-eslint",
-    "rules": {
-        "semi": ["error", "always"],
-        "indent": ["error", 4, { "SwitchCase" : 1}],
-        "quotes": [2, "single"],
-        "strict": [2, "never"],
-        "no-trailing-spaces": 0
-    }
+  "extends": "eslint:recommended",
+  "ecmaFeatures": {
+    "modules": true
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "semi": ["error", "always"],
+    "indent": ["error", 2, {
+      "SwitchCase": 1
+    }],
+    "quotes": [2, "single"],
+    "strict": [2, "never"],
+    "no-trailing-spaces": 0
+  }
 }

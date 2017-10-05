@@ -7,6 +7,7 @@
 > Generates a new random moment.js object
 
 ## Install
+*make sure you have moment installed*
 
 npm or yarn
 ```
