@@ -1,7 +1,7 @@
 {
   "name": "moment-random",
   "version": "1.0.4",
-  "author": "Ivan Mrvelj <ivan.mrvelj@protonmail.com>",
+  "author": "Ivan Mrvelj <imrvelj@protonmail.com>",
   "description": "Generates a random momentjs object",
   "license": "MIT",
   "repository": {
@@ -10,7 +10,6 @@
   },
   "main": "src/index.js",
   "scripts": {
-    "precommit": "npm test",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
@@ -36,15 +35,10 @@
     }
   },
   "devDependencies": {
-    "babel-eslint": "^7.1.0",
-    "babel-jest": "^19.0.0",
-    "babel-preset-env": "^1.7.0",
-    "eslint": "^3.9.1",
-    "eslint-plugin-jest": "^19.0.1",
-    "husky": "^0.13.3",
-    "jest": "^23.0.0",
-    "moment": "^2.20.1",
-    "rimraf": "^2.6.1"
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.4.1",
+    "jest": "^24.7.1",
+    "moment": "^2.24.0"
   },
   "peerDependencies": {
     "moment": ">= 2"

@@ -1,5 +1,5 @@
-import moment from 'moment';
-import random from '../src/index';
+const moment = require('moment');
+const random =  require('../src/index');
 
 const isProperDate = (date, from, to) =>
   date.isAfter(from) && date.isBefore(to);
