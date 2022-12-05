@@ -1,5 +1,5 @@
-
 # moment-random
+
 ![Build Status](https://travis-ci.org/imrvelj/moment-random.svg?branch=master)
 
 <img src="https://github.com/imrvelj/moment-random/raw/master/moment.png" style="width: 100px" />
@@ -7,30 +7,34 @@
 > Generates a new random moment.js object
 
 ## Install
-*make sure you have moment installed*
+
+_make sure you have moment installed_
 
 npm or yarn
+
 ```
 $ npm install --save moment-random
 ```
+
 ```
 $ yarn add moment-random
 ```
 
 ## Usage
 
-
 ---
+
 Just require it like any other library
 
 ```js
-const momentRandom = require('moment-random');
+const momentRandom = require('moment-random')
 
-momentRandom();
+momentRandom()
 // > random date in the past
 ```
 
 You can also specify an interval
+
 ```js
 momentRandom(end)
 // > random date between 0 unix time and {end} dates
